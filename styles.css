@@ -7,9 +7,36 @@
 
 body {
     margin: 0;
+    font-size: 30px;
 }
 
 * {
     color: var(--dark-text);
     font-family: 'Montserrat', sans-serif;
+}
+
+/* Navbar */
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.nav-item {
+    font-weight: 500;
+    text-decoration: none;
+    margin: 1.5rem 1rem;
+}
+
+#page-title {
+    font-size: 1.2em;
+    margin-right: auto;
+    font-weight: 600;
+}
+
+#call-to-action {
+    font-weight: 700;
+    text-decoration: none;
 }
