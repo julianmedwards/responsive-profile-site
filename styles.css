@@ -3,15 +3,18 @@
     --primary-color: #325c8e;
     --primary-darkened: #294261;
     --grey: #acacac;
+    --bg-img-ratio: 0; /* Calculated with values from JS script.*/
+    /* calc(img height / img width * 100vw) */
 }
 
 body {
     margin: 0;
-}
-
-* {
     color: var(--dark-text);
     font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    color: var(--dark-text);
 }
 
 /* Navbar */
@@ -53,4 +56,30 @@ body {
 
 /* Main Content */
 
-/* border-top: 1px solid #d1d1d1; */
+.content {
+    display: flex;
+    border-top: 1px solid #d1d1d1;
+}
+
+.bg {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    width: 100%; /* Strange issue perhaps related to rendering of
+                    sub-divs. Div has decimel pixel widths, leaving a
+                    ~1 pixel white gap on the right based on vw.
+                    Adding extra doesn't work (flexbox?) */
+    height: var(--bg-img-ratio);
+    background-image: url('img/julianprague.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.bg-space {
+    flex: 2;
+}
+
+.main-title {
+    flex: 1;
+    color: white;
+}
