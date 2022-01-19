@@ -2,6 +2,7 @@
     --dark-text: #313131;
     --primary-color: #325c8e;
     --primary-darkened: #294261;
+    --highlighted-color: #0872b4;
     --grey: #acacac;
     --bg-img-ratio: 0; /* Calculated with values from JS script.*/
     /* calc(img height / img width * 100vw) */
@@ -20,6 +21,10 @@ a {
 /* Navbar */
 
 .navbar {
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.nav-cont {
     display: flex;
     align-items: baseline;
     margin: 0 0.75rem;
@@ -54,11 +59,40 @@ a {
     margin-right: 1rem;
 }
 
+/* Nav menu (Collapsible, Phone Only) */
+
+#navmenu {
+    position: absolute;
+    background-color: white;
+    width: 0;
+    height: calc(100vh - 75px);
+    transition: 0.5s;
+    overflow-x: hidden;
+}
+
+.navmenu-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 10%;
+}
+
+.navmenu-list li {
+    padding: 1em 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.navmenu-list li:last-child {
+    border-bottom: 0;
+}
+
+/* #page-title i {
+    color: var(--highlighted-color);
+} */
+
 /* Main Content */
 
 .content {
     display: flex;
-    border-top: 1px solid #d1d1d1;
 }
 
 .bg {

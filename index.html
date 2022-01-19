@@ -1,6 +1,7 @@
 <!-- 
     Initial dev environment: Chrome DevTools iPhone SE (375x667) 
--->
+    Tested further on iPhone 7.
+  -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,11 +26,26 @@
   </head>
   <body>
     <div class="navbar">
-      <a href="#" class="nav-item" id="page-title"
-        ><i class="fas fa-ellipsis-v inline-icon"></i>about.me</a
-      >
-      <a href="#sign-up" class="nav-item" id="call-to-action">Get your page</a>
-      <a href="#log-in" class="nav-item">Log In</a>
+      <div class="nav-cont">
+        <a href="#" class="nav-item" id="page-title" onclick="toggleNav()"
+          ><i class="fas fa-ellipsis-v inline-icon"></i>about.me</a
+        >
+        <a href="#sign-up" class="nav-item" id="call-to-action"
+          >Get your page</a
+        >
+        <a href="#log-in" class="nav-item">Log In</a>
+      </div>
+    </div>
+    <div id="navmenu">
+      <ul class="navmenu-list">
+        <li><a href="#home" class="nav-item">Home</a></li>
+        <li>
+          <a href="#features" class="nav-item">Features</a>
+        </li>
+        <li>
+          <a href="#pricing" class="nav-item">Pricing</a>
+        </li>
+      </ul>
     </div>
     <div class="content">
       <div class="bg">
