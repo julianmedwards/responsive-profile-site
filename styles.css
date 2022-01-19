@@ -64,7 +64,6 @@ a {
 .bg {
     display: flex;
     flex-flow: column;
-    justify-content: flex-end;
     width: 100%; /* Strange issue perhaps related to rendering of
                     sub-divs. Div has decimel pixel widths, leaving a
                     ~1 pixel white gap on the right based on vw.
@@ -76,10 +75,27 @@ a {
 }
 
 .bg-space {
-    flex: 2;
+    flex: 1.75;
 }
 
 .main-title {
-    flex: 1;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    flex: 1.25;
+    text-align: center;
     color: white;
+    margin: 0 10% 1rem 10%;
+}
+
+/* Text Styling & Spacing */
+
+.title {
+    margin: 0.5rem 0;
+}
+
+@media (max-width: 480px) {
+    .main-title .title {
+        text-shadow: 1px 1px 1px #313131;
+    }
 }
