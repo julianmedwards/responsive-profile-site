@@ -14,8 +14,17 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-a {
+/* Colors */
+.dark {
     color: var(--dark-text);
+}
+
+.grey {
+    color: var(--grey);
+}
+
+.light {
+    color: white;
 }
 
 /* Navbar */
@@ -32,6 +41,7 @@ a {
 }
 
 .nav-item {
+    color: var(--dark-text);
     font-weight: 500;
     text-decoration: none;
     margin: 1.5em 0;
@@ -47,12 +57,6 @@ a {
 #call-to-action {
     font-weight: 800;
     text-decoration: none;
-}
-
-.inline-icon {
-    color: var(--grey);
-    vertical-align: text-bottom;
-    margin: 0 0.75rem 0 0.25em;
 }
 
 .nav-item:last-of-type {
@@ -89,6 +93,7 @@ a {
 
 .content {
     display: flex;
+    flex-flow: column nowrap;
 }
 
 .bg {
@@ -118,6 +123,10 @@ a {
     margin: 0 10% 1rem 10%;
 }
 
+.bio {
+    margin: 0 5%;
+}
+
 /* Text Styling & Spacing */
 
 .title {
@@ -128,4 +137,31 @@ a {
     .main-title .title {
         text-shadow: 1px 1px 1px #313131;
     }
+}
+
+/* Button & Icons */
+
+.button {
+    display: block;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.6em 1em;
+    border-radius: 5px;
+    margin: 2rem 0;
+}
+
+.button:hover {
+    background-color: var(--primary-darkened);
+}
+
+.inline-icon {
+    vertical-align: center;
+    margin-right: 0.5em;
+}
+
+#collapsible-icon {
+    vertical-align: text-bottom;
+    margin: 0 0.75rem 0 0.25em;
 }
