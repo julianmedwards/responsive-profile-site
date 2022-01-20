@@ -85,10 +85,6 @@ a {
     border-bottom: 0;
 }
 
-/* #page-title i {
-    color: var(--highlighted-color);
-} */
-
 /* Main Content */
 
 .content {
@@ -103,7 +99,7 @@ a {
                     ~1 pixel white gap on the right based on vw.
                     Adding extra doesn't work (flexbox?) */
     height: var(--bg-img-ratio);
-    background-image: url('img/julianprague.jpg');
+    background-image: url('../img/julianprague.jpg');
     background-size: contain;
     background-repeat: no-repeat;
 }

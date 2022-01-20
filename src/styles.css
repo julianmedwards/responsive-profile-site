@@ -1,0 +1,131 @@
+:root {
+    --dark-text: #313131;
+    --primary-color: #325c8e;
+    --primary-darkened: #294261;
+    --highlighted-color: #0872b4;
+    --grey: #acacac;
+    --bg-img-ratio: 0; /* Calculated with values from JS script.*/
+    /* calc(img height / img width * 100vw) */
+}
+
+body {
+    margin: 0;
+    color: var(--dark-text);
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    color: var(--dark-text);
+}
+
+/* Navbar */
+
+.navbar {
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.nav-cont {
+    display: flex;
+    align-items: baseline;
+    margin: 0 0.75rem;
+    gap: 1.5rem;
+}
+
+.nav-item {
+    font-weight: 500;
+    text-decoration: none;
+    margin: 1.5em 0;
+}
+
+#page-title {
+    font-size: 1.1rem;
+    margin-right: auto;
+    font-weight: 600;
+    letter-spacing: -0.08em;
+}
+
+#call-to-action {
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.inline-icon {
+    color: var(--grey);
+    vertical-align: text-bottom;
+    margin: 0 0.75rem 0 0.25em;
+}
+
+.nav-item:last-of-type {
+    margin-right: 1rem;
+}
+
+/* Nav menu (Collapsible, Phone Only) */
+
+#navmenu {
+    position: absolute;
+    background-color: white;
+    width: 0;
+    height: calc(100vh - 75px);
+    transition: 0.5s;
+    overflow-x: hidden;
+}
+
+.navmenu-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 10%;
+}
+
+.navmenu-list li {
+    padding: 1em 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.navmenu-list li:last-child {
+    border-bottom: 0;
+}
+
+/* Main Content */
+
+.content {
+    display: flex;
+}
+
+.bg {
+    display: flex;
+    flex-flow: column;
+    width: 100%; /* Strange issue perhaps related to rendering of
+                    sub-divs. Div has decimel pixel widths, leaving a
+                    ~1 pixel white gap on the right based on vw.
+                    Adding extra doesn't work (flexbox?) */
+    height: var(--bg-img-ratio);
+    background-image: url('../img/julianprague.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.bg-space {
+    flex: 1.75;
+}
+
+.main-title {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    flex: 1.25;
+    text-align: center;
+    color: white;
+    margin: 0 10% 1rem 10%;
+}
+
+/* Text Styling & Spacing */
+
+.title {
+    margin: 0.5rem 0;
+}
+
+@media (max-width: 480px) {
+    .main-title .title {
+        text-shadow: 1px 1px 1px #313131;
+    }
+}
