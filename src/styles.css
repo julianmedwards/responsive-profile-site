@@ -9,6 +9,7 @@
 }
 
 body {
+    height: 100%;
     margin: 0;
     color: var(--dark-text);
     font-family: 'Montserrat', sans-serif;
@@ -30,6 +31,10 @@ body {
 /* Navbar */
 
 .navbar {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background-color: white;
     border-bottom: 1px solid #d1d1d1;
 }
 
@@ -66,16 +71,19 @@ body {
 /* Nav menu (Collapsible, Phone Only) */
 
 #navmenu {
-    position: absolute;
-    background-color: white;
+    position: fixed;
+    z-index: 0;
+    bottom: 0;
     width: 0;
-    height: calc(100vh - 75px);
-    transition: 0.5s;
+    height: 100%;
     overflow-x: hidden;
+    background-color: white;
+    transition: 0.5s;
 }
 
 .navmenu-list {
     list-style: none;
+    padding-top: 75px;
     padding-left: 0;
     margin: 0 10%;
 }
@@ -94,6 +102,7 @@ body {
 .content {
     display: flex;
     flex-flow: column nowrap;
+    padding-top: 75px;
 }
 
 .bg {
