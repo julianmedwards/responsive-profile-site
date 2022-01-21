@@ -127,10 +127,29 @@ body {
     margin: 0 5%;
 }
 
+.experience {
+    text-align: center;
+}
+
 /* Text Styling & Spacing */
 
 .title {
     margin: 0.5rem 0;
+}
+
+.textblock {
+    margin: 2rem 0;
+    line-height: 1.5em;
+}
+
+.supertitle {
+    font-size: 0.75rem;
+    margin: 2em 0 0.5em 0;
+}
+
+.subscript {
+    font-size: 0.85rem;
+    margin: 0 0 0.5em 0;
 }
 
 @media (max-width: 480px) {
