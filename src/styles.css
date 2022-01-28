@@ -132,7 +132,8 @@ body {
 }
 
 #bio {
-    margin: 0 5%;
+    max-width: 450px;
+    margin: 0 auto;
 }
 
 .experience {
@@ -206,9 +207,9 @@ body {
     margin: 0 0.75rem 0 0.25em;
 }
 
-/* Tablet - Portrait - 481-1024px */
+/* Generic > Phone & Small Portrait Tablets */
 
-@media (min-width: 481px) {
+@media (min-width: 769px) {
     #main-title {
         color: var(--dark-text);
         flex: 0.75;
@@ -231,6 +232,7 @@ body {
     }
     #bio {
         margin: 0;
+        max-width: none;
     }
     .experience {
         text-align: left;

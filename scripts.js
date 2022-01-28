@@ -23,9 +23,9 @@ const content = document.getElementById('content')
 function moveBio() {
     let viewportWidth =
         window.innerWidth || document.documentElement.clientWidth
-    if (viewportWidth > 480 && bio.parentNode === content) {
+    if (viewportWidth > 768 && bio.parentNode === content) {
         mainTitle.appendChild(bio)
-    } else if (viewportWidth <= 480 && bio.parentNode === mainTitle) {
+    } else if (viewportWidth <= 768 && bio.parentNode === mainTitle) {
         content.appendChild(bio)
     }
 }
