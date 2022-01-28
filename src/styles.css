@@ -207,14 +207,14 @@ body {
     margin: 0 0.75rem 0 0.25em;
 }
 
-/* Generic > Phone & Small Portrait Tablets */
+/* Generic > Mobile & Small Portrait Tablets */
 
 @media (min-width: 769px) {
     #main-title {
         color: var(--dark-text);
         flex: 0.75;
         justify-content: center;
-        margin: 0 5% 4em 5%;
+        margin: 4em 5%;
         text-align: left;
     }
     .bg {
