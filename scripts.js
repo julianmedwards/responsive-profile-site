@@ -16,21 +16,27 @@ profileImg.src = '/img/julianprague.jpg'
 
 // Move bio elements into correct flex container on devices larger than
 // mobile.
+const pageTitle = document.getElementById('page-title')
 const mainTitle = document.getElementById('main-title')
 const bio = document.getElementById('bio')
 const content = document.getElementById('content')
 
-function moveBio() {
+function checkLayout() {
     let viewportWidth =
         window.innerWidth || document.documentElement.clientWidth
+    if (viewportWidth > 768) {
+        pageTitle.removeAttribute('onclick')
+    } else if (viewportWidth <= 768) {
+        pageTitle.setAttribute('onclick', 'toggleNav()')
+    }
     if (viewportWidth > 768 && bio.parentNode === content) {
         mainTitle.appendChild(bio)
     } else if (viewportWidth <= 768 && bio.parentNode === mainTitle) {
         content.appendChild(bio)
     }
 }
-window.onload = moveBio
-window.addEventListener('resize', moveBio)
+window.onload = checkLayout
+window.addEventListener('resize', checkLayout)
 
 // Off-canvas toggle nav menu on phone.
 function toggleNav() {

@@ -229,6 +229,9 @@ body {
 /* Generic > Mobile & Small Portrait Tablets */
 
 @media (min-width: 769px) {
+    #collapsible-icon {
+        display: none;
+    }
     #main-title {
         color: var(--dark-text);
         flex: 1;
