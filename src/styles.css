@@ -212,7 +212,7 @@ body {
 @media (min-width: 769px) {
     #main-title {
         color: var(--dark-text);
-        flex: 0.75;
+        flex: 1;
         justify-content: center;
         margin: 4em 5%;
         text-align: left;
@@ -223,8 +223,12 @@ body {
         background-image: none;
     }
     .bg-space {
-        flex: 2.25;
+        flex: 2.9;
+    }
+    .landscape-bg {
+        position: fixed;
         height: calc(100vh - 75px);
+        width: 66.67%;
         background-image: url('../img/julianprague.jpg');
         background-size: cover;
         background-repeat: no-repeat;
