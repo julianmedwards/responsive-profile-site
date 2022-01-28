@@ -191,10 +191,9 @@ body {
 .social-links {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
-    gap: 1em;
+    justify-content: center;
+    gap: 2em;
     margin: 2rem 0 6rem 0;
-    max-width: 200px;
 }
 
 .social-links a i {
@@ -235,5 +234,10 @@ body {
     }
     .experience {
         text-align: left;
+    }
+    .social-links {
+        justify-content: space-between;
+        gap: 1em;
+        max-width: 200px;
     }
 }
