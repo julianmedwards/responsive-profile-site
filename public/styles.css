@@ -41,7 +41,7 @@ body {
     display: flex;
     align-items: baseline;
     margin: 0 0.75rem;
-    gap: 1.5rem;
+    gap: 1.5em;
 }
 
 .nav-item {
@@ -52,7 +52,7 @@ body {
 }
 
 #page-title {
-    font-size: 1.1rem;
+    font-size: 1.1em;
     margin-right: auto;
     font-weight: 600;
     letter-spacing: -0.08em;
@@ -206,6 +206,16 @@ body {
 #collapsible-icon {
     vertical-align: text-bottom;
     margin: 0 0.75rem 0 0.25em;
+}
+
+/* Small Phones < 375px */
+
+@media (max-width: 374px) {
+    .nav-cont {
+        font-size: 0.9em;
+        padding: 0.25rem 0;
+        gap: 0.75em;
+    }
 }
 
 /* Small Tablets, 481-768px */
