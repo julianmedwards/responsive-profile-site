@@ -51,6 +51,10 @@ body {
     margin: 1.5em 0;
 }
 
+.collapsible-link {
+    display: none;
+}
+
 #page-title {
     font-size: 1.1em;
     margin-right: auto;
@@ -226,12 +230,20 @@ body {
     }
 }
 
-/* Generic > Mobile & Small Portrait Tablets */
+/* Switch between collapsed navbar, 600px */
 
-@media (min-width: 769px) {
+@media (min-width: 600px) {
     #collapsible-icon {
         display: none;
     }
+    .collapsible-link {
+        display: block;
+    }
+}
+
+/* Generic > Mobile & Small Portrait Tablets */
+
+@media (min-width: 769px) {
     #main-title {
         color: var(--dark-text);
         flex: 1;

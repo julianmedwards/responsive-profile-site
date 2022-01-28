@@ -17,6 +17,7 @@ profileImg.src = '/img/julianprague.jpg'
 // Move bio elements into correct flex container on devices larger than
 // mobile.
 const pageTitle = document.getElementById('page-title')
+const callToAction = document.getElementById('call-to-action')
 const mainTitle = document.getElementById('main-title')
 const bio = document.getElementById('bio')
 const content = document.getElementById('content')
@@ -24,10 +25,12 @@ const content = document.getElementById('content')
 function checkLayout() {
     let viewportWidth =
         window.innerWidth || document.documentElement.clientWidth
-    if (viewportWidth > 768) {
+    if (viewportWidth >= 600) {
         pageTitle.removeAttribute('onclick')
-    } else if (viewportWidth <= 768) {
+        callToAction.innerHTML = 'Get started for free'
+    } else if (viewportWidth < 600) {
         pageTitle.setAttribute('onclick', 'toggleNav()')
+        callToAction.innerHTML = 'Get your page'
     }
     if (viewportWidth > 768 && bio.parentNode === content) {
         mainTitle.appendChild(bio)
