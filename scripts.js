@@ -12,7 +12,8 @@ profileImg.onload = function () {
         `calc(${height} / ${width} * 100vw)`
     )
 }
-profileImg.src = 'img/julianprague.jpg'
+// responsive-profile-site needed for Github Pages to work.
+profileImg.src = '/responsive-profile-site/img/julianprague.jpg'
 
 // Move bio elements into correct flex container on devices larger than
 // mobile.
