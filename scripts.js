@@ -12,7 +12,7 @@ profileImg.onload = function () {
         `calc(${height} / ${width} * 100vw)`
     )
 }
-profileImg.src = '/img/julianprague.jpg'
+profileImg.src = 'img/julianprague.jpg'
 
 // Move bio elements into correct flex container on devices larger than
 // mobile.
